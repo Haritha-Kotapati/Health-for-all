@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    text-align: center;
+  }
+  .column:nth-child(1){
+    display: block;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .column .title{
+    background-color: #E9E9E9;
+    padding: 20px;
+    margin: 90px;
+    border-radius: 10px;
+  }
+
+  /* Add some basic styles to the dropdown */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.dropbtn {
+    background-color: #E9E9E9;
+    color: black;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Style the dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E9E9E9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show the dropdown content when the button is hovered */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Style the toggle container */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Style the toggle label */
+.toggle-container label {
+    margin-right: 10px;
+}
+
+/* Hide the default checkbox appearance */
+.toggle-container input[type="checkbox"] {
+    display: none;
+}
+
+/* Style the toggle button appearance */
+.toggle-container .toggle-button {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Change background color when the toggle is checked */
+.toggle-container input[type="checkbox"]:checked + .toggle-button {
+    background-color: #27ae60;
+}
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
